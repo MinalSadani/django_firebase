@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+ 
+<title>Register</title>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ 
+}
+
+
+/* Style the header */
+header {
+  background-color: rgb(96, 89, 192);
+  padding: 0.2vmax ;
+  text-align: center;
+  font-size: 1vmax;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 60%;
+  /*height: 900px; only for demonstration, should be emoved */
+  background: rgb(255, 255, 255);
+  padding-left: 2vmax;
+
+}
+ 
+
+/* Style the list inside the menu */
+   nav ul {
+  list-style-type: none;
+  padding: 0.5vmax;
+}
+
+article {
+  float: left;
+  padding: 0.2vmax;
+  width: 33%;
+  background-color: #FFFAFA;
+  /*height: 600px;  only for demonstration, should be emoved */
+  margin: 1vmax 0.9vmax ;
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input[ id="ip1"], select {
+  width: 41%;
+  padding: 13px 18px;
+  margin-right: 2px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  box-shadow: inset 0 8px 6px -6px rgb(199, 197, 197)
+}
+input[ id="ip2"], select {
+  width: 41%;
+  padding: 14px 19px;
+  margin-left: 5px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  box-shadow: inset 0 8px 6px -6px rgb(199, 197, 197)
+
+}
+input[ id="ip3"], select {
+  width: 86%;
+  padding:  13px 19px;
+  margin:  20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  box-shadow: inset 0 8px 6px -6px rgb(199, 197, 197)
+
+}
+input[ id="ip4"], select {
+  width: 86%;
+  padding: 2vmin 2vmin;
+  margin: 20px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 20px;
+  box-shadow: inset 0 8px 6px -6px rgb(199, 197, 197)
+
+}
+input[ id="ip5"], select {
+  width: 86%;
+  padding: 13px 18px;
+  margin: 9px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  box-shadow: inset 0 8px 6px -6px rgb(199, 197, 197)
+
+}
+input[ id="ip6"], select {
+  width: 86%;
+  padding: 13px 18px;
+  margin: 9px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  box-shadow: inset 0 8px 6px -6px rgb(199, 197, 197)
+
+}
+input[ id="ip7"], select {
+  width: 86%;
+  padding: 13px 18px;
+  margin: 9px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  box-shadow: inset 0 8px 6px -6px rgb(199, 197, 197)
+
+}
+input[ id="ip8"], select {
+  width: 86%;
+  padding: 13px 18px;
+  margin: 9px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  box-shadow: inset 0 8px 6px -6px rgb(199, 197, 197)
+
+}
+input[ id="fakeBrowse"], select {
+  width: 22%;
+  padding: 13px 17px;
+  display: inline-block;  
+  font-size: 16px;
+ 
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: inset 0 8px 6px -6px rgb(199, 197, 197)
+}
+input[ id="ip10"], select {
+  width: 86%;
+  padding: 13px 18px;
+  margin: 9px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  box-shadow: inset 0 8px 6px -6px rgb(199, 197, 197)
+
+}
+input[ id="ip11"], select {
+  width: 86%;
+  padding: 13px 18px;
+  margin: 9px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  box-shadow: inset 0 8px 6px -6px rgb(199, 197, 197)
+
+}
+input[ id="filename"], select {
+  width: 62%;
+  padding: 14px 19px;
+  
+  margin-top: 9px;
+  margin-bottom: 9px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 20px;
+  box-shadow: inset 0 8px 6px -6px rgb(199, 197, 197)
+}
+
+
+
+input[type="password"], select {
+  width: 86%;
+  padding: 13px 18px;
+  margin: 9px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+   font-size:  18px;
+}
+
+.button {
+  background-color: rgb(89, 212, 58);
+  border: none;
+  color: white;
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2vmax;
+  margin: 1px 1px;
+  cursor: pointer;
+  width: 86%;
+}
+.button1 {
+  background-color: rgb(93, 92, 90);
+  text-align: left;
+  width: 100%;
+  margin-top: 0;
+  color: white;
+}
+
+ul {list-style: none}
+li::before {content: '\25C6'; color: indigo;
+  display: inline-block; width: 1em;
+  margin-left: 0.2vmax}
+
+
+hr{
+  border: 0;
+    border-top: 1px solid #eee;
+    margin: -10px 0;
+}
+
+::placeholder
+{
+  color:  rgb(162, 160, 156);
+}
+
+.container {
+max-width: 90vmax;
+width: 100%;
+margin: 2vmax auto;
+box-shadow: 1px 1px 2px rgba(245, 241, 237, 0.527);
+}
+@media (max-width: 768px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+  <button class="button1" onclick="goBack()"><   Back</button>
+
+
+<header>
+  <h1 >Join our Network!!</h1>
+</header>
+
+<section>
+  <nav>
+<div style="margin-left: -2vmin;">
+    
+
+<div style="color: rgb(162, 160, 156); font-size: 1.7vmax;"> <p><ul>
+<li>Sign up for Free! </ul>
+</li></p></div>
+
+<div style="color: rgb(162, 160, 156);  font-size: 1.7vmax;"> <p><ul>
+<li> Set Your Availabilities with Flexible Commitment...</li></ul></p> </div>
+
+<div style="color: rgb(162, 160, 156);  font-size: 1.7vmax;"><p><ul>
+<li>
+  Set Your Session Pricing...</li></ul></p></div>
+
+
+  <div style="color: rgb(162, 160, 156);  font-size:1.7vmax;"><p><ul><li>
+    Enjoy our services</li></ul></p></div>
+
+ 
+ <div style="color: rgb(162, 160, 156);  font-size: 1.7vmax;"><p><ul><li>
+  We hope you love it!</li></ul> </p></div>
+
+
+
+  </nav>
+  
+  <article>
+<div style="background-color:#f2f2f2 ">
+
+  
+  <div class="container">
+    <form action="/postregister_counselor/" method="post">
+      {% csrf_token %}
+   <div class="container">
+      <br>
+    <center><h3 style="color: rgb(128, 125, 118); font-size: 28px;">Sign Up<b></b></h3></center><center>
+      <input id="ip1" type="text" placeholder=" First Name" name="first_name" required>
+      <input id="ip2" type="text" placeholder=" Last Name" name="last_name" required>
+      
+      <input id="ip3" type="email" placeholder=" Email" name="email" required>
+      
+    <input id="ip4" type="password" class="form-control" placeholder=" Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  required>
+    <p style="font-size:15px">Password must contain 8 letters atleast 1 uppercase 1 lowercase & 1 digit</p>
+      <input type="password" class="form-control" id="ip5"placeholder=" Confirm Password" name="Confirm Password" class="input" required><br>
+         
+
+
+
+      <input id="ip6" type="text" placeholder=" Communication Address" name="address" required>
+
+      <input id="ip7" type="text" placeholder=" Pin Code" name="pin_code" pattern="[0-9]{6}" required>
+
+      <input id="ip8" type="text" placeholder=" Contact Number" name="contact_no" pattern="[7-9]{1}[0-9]{9}" required>
+
+    
+      <input type="text" placeholder="  Your Id Proof" id="filename" readonly="true"/>
+      <input type="file" name="files[]" id="files" accept="application/pdf,image/*">
+      <input type="hidden" name="url" id="url">
+      <button type="button" onclick="uploadimage()">Upload</button> <br />
+
+         <div class="clearfix">
+           <button type="submit" class="signupbtn" style="border-radius:5px; width: 85%; height: 50px; background-color: #6ac059; font-size:14px;color:#ffffff" onclick="return Validate()">Join Network of Top Expert Counselors!</button>
+         </div>
+
+     
+<center><p>By signing up, you are agreeing to our Privacy Policy and </p>
+<p>Terms and Conditions</a></p></center>
+    </div>
+  
+</form>
+</div>
+  </article>
+</section>
+
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyAL6y7jvIY1win9H9XGy1BcQpqj7MyNSYg",
+    authDomain: "minnano-df3a0.firebaseapp.com",
+    databaseURL: "https://minnano-df3a0.firebaseio.com",
+    projectId: "minnano-df3a0",
+    storageBucket: "minnano-df3a0.appspot.com",
+  };
+  firebase.initializeApp(config);
+
+   function uploadimage()
+{
+  // Get a reference to the storage service, which is used to create references in your storage bucket
+   var storage = firebase.storage();
+
+    var file = document.getElementById("files").files[0];
+    var storageRef = storage.ref();
+    var thisref = storageRef.child(file.name).put(file);
+    thisref.on('state_changed',function(snapshot){
+      console.log("file uploaded successfully");
+    },
+    function(error) {
+    },
+
+    function() {
+  var downloadURL = thisref.snapshot.downloadURL; 
+  console.log("got url");
+  document.getElementById("url").value = downloadURL
+  alert("file uploaded successfully")
+  });
+    
+}
+
+	function Validate() {
+        var password = document.getElementById('ip4').value;
+        var confirmPassword = document.getElementById('ip5').value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+       }
+ function goBack() {
+     window.history.back();
+   }
+	  </script>
+
+</body>
+</html>
